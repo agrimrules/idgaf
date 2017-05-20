@@ -1,0 +1,12 @@
+{
+  "manifest_version": 2,
+  "name": "idgaf",
+  "version": "1.0",
+  "description": "Nigga I dont give a f",
+  "content_scripts": [
+    {
+      "matches": ["*://*.facebook.com/*"],
+      "js": ["idgaf.js"]
+    }
+  ]
+}
