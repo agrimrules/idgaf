@@ -4,10 +4,12 @@ function cleanup(){
   var posts = document.getElementsByClassName("_5jmm");
   for(i=0; i < posts.length ; i++){
    var paragh =  posts[i].getElementsByTagName("p");
-   for (j=0; j < paragh.length; j++){
+   for (j=0; j < paragh.length; j++) {
      txt = paragh[j].textContent.toLowerCase()
-     if (txt.indexOf("marriage") !== -1 || txt.indexOf("wedding") !== -1){
-       posts[i].remove();
+     for (y=0; y< bannedTerms.length; y++) {
+       if (txt.indexOf(bannedTerms[y]) !== -1){
+         posts[i].remove();
+       }
      }
    }
   }
